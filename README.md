@@ -2,26 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
-## Development server
+El proyecto se construyó en Angular, de el se desprenden cuadro componentes que pretenden resolver el reto de un sistema de registro de vacunación, de los cuales solamente se ha presentado tres:
+  login: Componente enfocado al inicio de sesión y principal diferenciador entre los tipos de rol 'admin y 'empleado'
+  listar-empleados: Destinado a ser la pantalla principal del rol 'admin' donde podrá visualizar a sus empleados, actualizar su información principal o eliminarlos.
+  crea-empleado: Componente encargado de recoger la información necesaria para crear un empleado, también actua como pantalla para actualizar su información.
+  
+El cuarto componente iría destinado a la actualización de información personal donde podría agregar el registro de vacunación.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para el estilo CSS del Front-end se utilizó bootstrap en su versión 5.2.0-beta1
+Otro componente importante Toastr con su versión 14.3.0 que permite emitir cuadros de notificaciónes sobre acciones que cometa el usuario en el sistema.
 
-## Code scaffolding
+Para la validación unicamente he alcanzado hacer que los formularios tanto de Login como crear Empleado sean obligatorios.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+para correr la aplicación web descargar las dependencias anteriormente comentadas y ejecutar ng serve -o para que se abra en su navegador predeterminado, además podría revisar la páginca web una vez ejecutada la aplicación en la dirección http://localhost:4200/ en caso de preferirlo.
