@@ -14,4 +14,6 @@ Otro componente importante Toastr con su versión 14.3.0 que permite emitir cuad
 
 Para la validación unicamente he alcanzado hacer que los formularios tanto de Login como crear Empleado sean obligatorios.
 
-para correr la aplicación web descargar las dependencias anteriormente comentadas y ejecutar ng serve -o para que se abra en su navegador predeterminado, además podría revisar la páginca web una vez ejecutada la aplicación en la dirección http://localhost:4200/ en caso de preferirlo.
+Los usuarios para acceder al sistema son  ("admin", "admin123"), y los empleados se crean con usuario igual a su nombres sin espacios y en minúsculas por ejemplo ("renatodavid") y la contraseña siempre será ("abc123")
+
+Para correr la aplicación web descargar las dependencias anteriormente comentadas y ejecutar ng serve -o para que se abra en su navegador predeterminado, además podría revisar la páginca web una vez ejecutada la aplicación en la dirección http://localhost:4200/ en caso de preferirlo.
