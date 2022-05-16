@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-body text-center">
+          <span class="titulo">Listado de Empleados</span>
+          <button class="btn btn-success float-end" routerLink="/crear-empleado">NUEVO</button>
+          <table *ngIf="listEmpleados.length > 0" class="table table-striped mt-3">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Cédula</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let empleado of listEmpleados">
+                <td>{{ empleado.cedula }}</td>
+                <td>{{ empleado.nombres }}</td>
+                <td>{{ empleado.apellidos }}</td>
+                <td>{{ empleado.email }}</td>
+                <td>
+                  <i [routerLink]="['/editar-empleado', empleado._id]" class="fa-solid fa-pen text-primary"></i>
+                  <i (click)="eliminarEmpleado(empleado._id)" class="fa-solid fa-trash text-danger"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h5 style="text-align: start; margin-top: 10px;" *ngIf="listEmpleados.length == 0">No hay empleado por mosrtrar</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

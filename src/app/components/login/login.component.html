@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-log-6 offset-lg-3">
+      <div class="card">
+        <div class="card-body text-center">
+          <span class="titulo">LOGIN</span>
+          <form class="mt-3" [formGroup]="usuarioForm" (ngSubmit)="loginUsuario()">
+            <div class="mb-3">
+              <input type="text" formControlName="usuario" class="form-control form-control-lg" placeholder="USUARIO">
+              <div class="text-danger"
+                *ngIf="usuarioForm.get('usuario')?.hasError('required') && usuarioForm.get('usuario')?.touched">
+                <span>Usuario <strong>requerido</strong></span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <input type="text" formControlName="contrasenia" class="form-control form-control-lg" placeholder="CONTRASEÑA">
+              <div class="text-danger"
+                *ngIf="usuarioForm.get('contrasenia')?.hasError('required') && usuarioForm.get('nombres')?.touched">
+                <span>Contraseña <strong>requerida</strong></span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <button type="submit" [disabled]="usuarioForm.invalid" class="btn btn-success btn-lg float-end">INGRESAR</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
